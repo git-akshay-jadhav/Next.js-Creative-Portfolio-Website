@@ -1,5 +1,5 @@
 # Use Node.js LTS as the base image
-FROM node:18-alpine
+FROM node:20-alpine
 
 # Set the working directory inside the container
 WORKDIR /app
@@ -17,7 +17,7 @@ COPY . .
 RUN npm run build
 
 # Expose the port your app runs on (default 3000)
-EXPOSE 8001
+EXPOSE 80
 
 # Start the app in production mode
 CMD ["npm", "start"]
