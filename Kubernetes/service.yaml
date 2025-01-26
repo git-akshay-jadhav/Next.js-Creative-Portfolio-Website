@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: Portfolio
+  name: portfolio
   labels:
-    app: Portfolio
+    app: portfolio
 spec:
   type: NodePort
   ports:
@@ -11,4 +11,4 @@ spec:
     targetPort: 80
     nodePort: 30007
   selector:
-    app: Portfolio
+    app: portfolio
