@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: Portfolio
+  labels:
+    app: Portfolio
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: Portfolio
+  template:
+    metadata:
+      labels:
+        app: Portfolio
+    spec:
+      containers:
+      - name: Portfolio
+        image: akshay1669/portfolio:latest
+        ports:
+        - containerPort: 3000
